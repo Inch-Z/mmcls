@@ -22,12 +22,7 @@ RUN mim install mmcv-full
 
 # Install MMClassification
 RUN conda clean --all
+RUN git clone https://github.com/Inch-Z/mmcls.git
+WORKDIR ./mmcls
 RUN pwd
-COPY ./mmclassification-master.zip ./
-RUN ls
-RUN apt-get install unzip
-RUN unzip mmclassification-master.zip 
-WORKDIR ./mmclassification-master
-RUN pwd
-RUN ls
 RUN pip install --no-cache-dir -e .
