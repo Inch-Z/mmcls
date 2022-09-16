@@ -1,0 +1,1 @@
+./tools/dist_train.sh local_configs/9.13/fnet.py 8
